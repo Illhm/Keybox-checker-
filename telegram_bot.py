@@ -6,7 +6,7 @@ import contextlib
 import telebot
 from keybox_checker import analyze_key_node, print_human, human_timedelta
 
-API_TOKEN = os.environ.get("7004525417:AAE-MiUqrgbxhUPdX-mGdWXmNUCqSuvI43Y")
+API_TOKEN = os.environ.get("KEYBOX_BOT_TOKEN")
 if not API_TOKEN:
     raise RuntimeError("Environment variable KEYBOX_BOT_TOKEN is not set")
 
