@@ -6,11 +6,9 @@ import contextlib
 import telebot
 from keybox_checker import analyze_key_node, print_human, human_timedelta
 
-API_TOKEN = os.environ.get("7004525417:AAE-MiUqrgbxhUPdX-mGdWXmNUCqSuvI43Y")
-if not API_TOKEN:
-    raise RuntimeError("Environment variable KEYBOX_BOT_TOKEN is not set")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "7004525417:AAE-MiUqrgbxhUPdX-mGdWXmNUCqSuvI43Y")
+bot = telebot.TeleBot(BOT_TOKEN)
 
-bot = telebot.TeleBot(API_TOKEN)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
