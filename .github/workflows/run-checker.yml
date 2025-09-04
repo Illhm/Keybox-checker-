@@ -13,4 +13,5 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install -r requirements.txt
+      - run: export KEYBOX_BOT_TOKEN=7004525417:AAE-MiUqrgbxhUPdX-mGdWXmNUCqSuvI43Y
       - run: python telegram_bot.py 
