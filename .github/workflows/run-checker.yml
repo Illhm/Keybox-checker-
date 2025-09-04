@@ -13,4 +13,4 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install -r requirements.txt
-      - run: python keybox_checker.py integritybox.vercel.app.xml --json
+      - run: python keybox_checker.py integritybox.vercel.app.xml
